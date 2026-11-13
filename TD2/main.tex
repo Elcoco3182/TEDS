@@ -1,0 +1,218 @@
+\documentclass[10pt,a4paper]{article}
+
+% ---------- Packages ----------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{lmodern}
+\usepackage[landscape,margin=1.4cm]{geometry}
+\usepackage[table]{xcolor}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usepackage{hyperref}
+
+% ---------- Couleurs ----------
+\definecolor{bleu}{HTML}{009EE0}
+\definecolor{bleufonce}{HTML}{16396B}
+\definecolor{gris}{HTML}{F3F3F3}
+\definecolor{vert}{HTML}{2EA44F}
+\definecolor{rouge}{HTML}{D7263D}
+\definecolor{orange}{HTML}{F28C00}
+
+\hypersetup{colorlinks=true, urlcolor=bleu, linkcolor=bleufonce}
+
+% ---------- Pastilles de position ----------
+\newcommand{\pastille}[1]{\tikz[baseline=-0.55ex]\fill[#1] (0,0) circle (0.9ex);}
+\newcommand{\fav}{\pastille{vert}\,Favorable}
+\newcommand{\opp}{\pastille{rouge}\,Opposé}
+\newcommand{\inter}{\pastille{orange}\,Intermédiaire}
+
+% ---------- Raccourcis ----------
+\newcommand{\nl}{\newline}
+\newcommand{\epi}{Épistémologique}
+\newcommand{\axio}{Axiologique}
+
+% ---------- Mise en forme ----------
+\renewcommand{\arraystretch}{1.3}
+\setlength{\tabcolsep}{4pt}
+\setlength{\parindent}{0pt}
+\setlength{\emergencystretch}{3em}
+\pagestyle{empty}
+
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+% Ligne de titre de groupe (un groupe = un document)
+\newcommand{\groupe}[1]{%
+  \rowcolor{bleufonce}
+  \multicolumn{6}{@{}l@{}}{\color{white}\bfseries\ \,#1} \\
+}
+
+\begin{document}
+
+{\color{bleufonce}\LARGE\bfseries TD2 - Tableau d'analyse des acteurs}\par\vspace{2pt}
+{\color{bleu}\large Groupe 10 -- Ferracuti Filippo - Cuenca Corentin - Daviaud Yohan - Leclere Adam - Vayva Nathan}\par\vspace{8pt}
+
+\textbf{Controverse :} le numérique (et l'IA) est-il un allié de la transition écologique, ou son empreinte et ses effets rebond en annulent-ils les bénéfices ?
+
+\vspace{4pt}
+\textbf{Légende :} \fav\quad \opp\quad \inter\quad (reconnaît des bénéfices mais exprime des réserves).
+
+\vspace{8pt}
+
+\rowcolors{2}{gris}{white}
+\begin{longtable}{@{}
+  P{3.9cm} P{2.7cm} P{2.7cm} P{8.6cm} P{3.4cm} P{3.0cm} @{}}
+
+% ----- En-tête première page -----
+\rowcolor{bleu}
+\color{white}\bfseries Acteur &
+\color{white}\bfseries Type d'acteur &
+\color{white}\bfseries Position &
+\color{white}\bfseries Argument principal &
+\color{white}\bfseries Type d'argument &
+\color{white}\bfseries Nature de l'argument \\
+\endfirsthead
+
+% ----- En-tête pages suivantes -----
+\rowcolor{bleu}
+\color{white}\bfseries Acteur &
+\color{white}\bfseries Type d'acteur &
+\color{white}\bfseries Position &
+\color{white}\bfseries Argument principal &
+\color{white}\bfseries Type d'argument &
+\color{white}\bfseries Nature de l'argument \\
+\endhead
+
+\multicolumn{6}{r}{\scriptsize\itshape Suite page suivante\ldots} \\
+\endfoot
+\bottomrule
+\endlastfoot
+
+% =====================================================
+% DOCUMENT 1 -- Article scientifique
+% =====================================================
+\groupe{Document 1 -- Article scientifique : Callegari, Misganaw \& Bagherzadeh (2024), \emph{Paved with good intentions}, Journal of Environmental Management}
+
+Callegari, Misganaw \& Bagherzadeh (NEOMA, Kristiania)
+& Scientifique & \inter
+& La numérisation offre des avantages, mais elle ne suffit pas à elle seule à atteindre la neutralité carbone : elle repose sur une infrastructure matérielle et énergivore, génère des effets rebond, élargit l'offre au lieu de la substituer et ne change pas la gouvernance des entreprises. Il faut une « double transformation » (numérique et durable).
+& Scientifique \nl Environnemental & \epi \\
+
+Alibaba Group (D.~Zhang)
+& Économique & \fav
+& La numérisation et les plateformes décarbonent les opérations de l'entreprise et toute sa chaîne de valeur.
+& Environnemental \nl Économique & \epi \\
+
+Forum économique mondial (WEF) et Accenture
+& Économique & \fav
+& Le secteur numérique est l'« influenceur » le plus puissant pour accélérer l'action vers les objectifs de l'Accord de Paris, et ses technologies pourraient réduire les émissions de 20\,\% d'ici 2050 (analyse Accenture--WEF).
+& Environnemental & \epi \\
+
+Cabinets de conseil (McKinsey, PwC, EY)
+& Économique & \fav
+& Leurs rapports soulignent le rôle clé des technologies numériques dans la réduction des empreintes carbone.
+& Environnemental \nl Économique & \epi \\
+
+Fournisseurs de technologies ICT (Ericsson)
+& Économique & \inter
+& Reconnaissent l'enjeu de la consommation énergétique du secteur et s'engagent à la neutralité carbone de leurs chaînes de valeur d'ici 2050, tout en étant jugés essentiels aux objectifs de « net zero » des pays.
+& Environnemental \nl Économique & \axio \\
+
+Décideurs politiques
+& Politique & \fav
+& Promeuvent et financent la numérisation rapide de tous les secteurs de l'économie.
+& Économique & \axio \\
+
+Acteurs de la blockchain et grandes marques (Nike, Adidas)
+& Économique & \fav
+& Élargissent leur offre par de nouveaux modèles d'affaires numériques : cryptomonnaies pour les acteurs de la blockchain, NFT pour Nike, Adidas et Under Armour.
+& Économique & \axio \\
+
+\newpage
+% =====================================================
+% DOCUMENT 2 -- Communiqué ADEME
+% =====================================================
+\groupe{Document 2 -- Communiqué de presse de l'ADEME : \emph{Le numérique : allié de la transition écologique ?} (étude IT4Green, 06/11/2025)}
+
+ADEME (étude IT4Green)
+& Scientifique & \inter
+& Les gains environnementaux sont réels dans les 5 cas étudiés mais modestes et fragiles, car l'effet rebond et la dépendance aux métaux peuvent les annuler.
+& Scientifique \nl Environnemental & \epi \\
+
+ADEME (E.~Fangeat)
+& Scientifique & \inter
+& Le numérique peut être un allié à condition d'être piloté avec sobriété, au juste niveau de technologie et au service d'un besoin réel.
+& Environnemental \nl Éthique & \axio \\
+
+Ministères de l'Écologie et du Numérique
+& Politique & \inter
+& Face à l'empreinte carbone croissante du numérique et aux promesses de ses technologies, ils commandent l'étude IT4Green pour en évaluer objectivement les impacts nets.
+& Scientifique & \epi \\
+
+%\newpage
+% =====================================================
+% DOCUMENT 3 -- ADEME Infos
+% =====================================================
+\groupe{Document 3 -- Article ADEME Infos : \emph{Le poids écologique du numérique : comment freiner l'emballement ?} (avis de janvier 2025)}
+
+ADEME (R.~Guastavi, M.~Wellhoff) -- constat
+& Scientifique & \opp
+& L'empreinte carbone du numérique en France est passée de 17 à 29,5\,MtCO$_2$e en deux ans, en partie grâce à une meilleure prise en compte des impacts (data centers à l'étranger) et en partie sous l'effet de la multiplication des usages ; cet emballement exponentiel menace le climat, la biodiversité et les efforts de transition.
+& Environnemental & \epi \\
+
+ADEME (R.~Guastavi, M.~Wellhoff) -- recommandations
+& Scientifique & \inter
+& Il faut allonger la durée de vie des appareils et prioriser les usages, sans tout supprimer, car certains outils numériques servent la transition.
+& Environnemental \nl Social & \axio \\
+
+Agence internationale de l'énergie (AIE)
+& Scientifique & \opp
+& Prévoit une hausse de plus de 75\,\% de la consommation électrique des data centers d'ici 2026, portée par l'essor de l'IA générative (chiffre cité par l'ADEME).
+& Environnemental & \epi \\
+
+Microsoft et Google
+& Économique & \inter
+& Misent sur le nucléaire pour alimenter l'IA (relance de Three Mile Island pour Microsoft, mini-réacteurs SMR pour Google) tout en admettant qu'ils auront du mal à tenir leurs engagements climatiques (émissions de Microsoft : +13\,\% depuis 2020).
+& Économique \nl Environnemental & \axio \\
+
+États (non nommés dans l'article)
+& Politique & \fav
+& Relancent leurs centrales à charbon, en attendant la construction de centrales nucléaires, pour répondre à la hausse de la demande électrique liée à l'essor du numérique et de l'IA.
+& Économique \nl Environnemental & \axio \\
+
+\newpage
+% =====================================================
+% DOCUMENT 4 -- MIT Technology Review
+% =====================================================
+\groupe{Document 4 -- Article de presse : J.~Temple, \emph{Why the climate promises of AI sound a lot like carbon offsets}, MIT Technology Review (10/04/2025)}
+
+James Temple (MIT Technology Review)
+& Médiatique & \inter
+& Reconnaît que l'IA pourrait réduire les émissions à terme, mais justifier aujourd'hui des data centers alimentés par des fossiles par ces gains futurs ressemble aux crédits carbone : bénéfices incertains, lointains et sans mécanisme de responsabilité.
+& Environnemental \nl Économique & \axio \\
+
+Agence internationale de l'énergie (AIE)
+& Scientifique & \inter
+& L'IA pourrait réduire les émissions de 1,4\,Gt en 2035, mais ce scénario n'est pas une prédiction et l'impact pourrait être marginal sans conditions favorables.
+& Scientifique \nl Environnemental & \epi \\
+
+Sam Altman (OpenAI)
+& Économique & \fav
+& L'IA apportera des « triomphes stupéfiants », dont régler le climat, avec une intelligence quasi illimitée et une énergie abondante ; Temple y voit une justification implicite de la forte demande électrique des data centers.
+& Environnemental \nl Économique & \axio \\
+
+Développeurs de data centers et industrie gazière
+& Économique & \opp
+& Leur pratique (gaz, charbon reconverti) contredit la thèse du numérique comme allié de la transition.
+& Économique & \axio \\
+
+Entreprises technologiques et électriciens engagés
+& Économique & \fav
+& Financent des fermes solaires, aident à relancer des centrales nucléaires (Three Mile Island) ou signent des contrats géothermiques pour alimenter leurs data centers en énergie bas carbone.
+& Environnemental \nl Économique & \axio \\
+
+\end{longtable}
+
+\end{document}
