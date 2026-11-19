@@ -1,0 +1,250 @@
+\documentclass[10pt,a4paper]{article}
+
+% ---------- Packages ----------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{lmodern}
+\usepackage[landscape,margin=1.4cm]{geometry}
+\usepackage[table]{xcolor}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usepackage{hyperref}
+
+% ---------- Couleurs ----------
+\definecolor{bleu}{HTML}{009EE0}
+\definecolor{bleufonce}{HTML}{16396B}
+\definecolor{gris}{HTML}{F3F3F3}
+\definecolor{vert}{HTML}{2EA44F}
+\definecolor{rouge}{HTML}{D7263D}
+\definecolor{orange}{HTML}{F28C00}
+
+\hypersetup{colorlinks=true, urlcolor=bleu, linkcolor=bleufonce}
+
+% ---------- Raccourcis ----------
+\newcommand{\nl}{\newline}
+\newcommand{\sci}{Scientifique}
+\newcommand{\inst}{Institutionnelle / politique}
+\newcommand{\med}{Médiatique}
+\newcommand{\eco}{Économique / professionnelle}
+\newcommand{\cit}{Citoyenne / associative}
+
+% ---------- Mise en forme ----------
+\renewcommand{\arraystretch}{1.3}
+\setlength{\tabcolsep}{4pt}
+\setlength{\parindent}{0pt}
+\setlength{\emergencystretch}{3em}
+\pagestyle{empty}
+
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+% Ligne de titre de groupe (un groupe = un document), titre cliquable
+\newcommand{\groupe}[2]{%
+  \rowcolor{bleufonce}
+  \multicolumn{5}{@{}l@{}}{\href{#1}{\textcolor{white}{\bfseries\ \,#2}}} \\
+}
+
+\begin{document}
+
+{\color{bleufonce}\LARGE\bfseries TD3 - Tableau d’analyse des arènes}\par\vspace{2pt}
+{\color{bleu}\large Groupe 10 -- Ferracuti Filippo - Cuenca Corentin - Daviaud Yohan - Leclere Adam - Vayva Nathan}\par \vspace{2pt}
+{\color{bleu}\large 18/11/2026}
+\vspace{8pt}
+
+\textbf{Controverse :} le numérique (et l'IA) est-il un allié de la transition écologique, ou son empreinte et ses effets rebond en annulent-ils les bénéfices ?
+
+\vspace{4pt}
+
+\vspace{8pt}
+
+\rowcolors{2}{gris}{white}
+\begin{longtable}{@{}
+  P{3.9cm} P{3.3cm} P{5.2cm} P{3.6cm} P{8.6cm} @{}}
+
+% ----- En-tête première page -----
+\rowcolor{bleu}
+\color{white}\bfseries Acteur &
+\color{white}\bfseries Arène(s) où il intervient &
+\color{white}\bfseries Support / trace observée &
+\color{white}\bfseries Public principalement visé &
+\color{white}\bfseries Manière de présenter le problème \\
+\endfirsthead
+
+% ----- En-tête pages suivantes -----
+\rowcolor{bleu}
+\color{white}\bfseries Acteur &
+\color{white}\bfseries Arène(s) où il intervient &
+\color{white}\bfseries Support / trace observée &
+\color{white}\bfseries Public principalement visé &
+\color{white}\bfseries Manière de présenter le problème \\
+\endhead
+
+\multicolumn{5}{r}{\scriptsize\itshape Suite page suivante\ldots} \\
+\endfoot
+\bottomrule
+\endlastfoot
+
+% =====================================================
+\groupe{}{Document 1 -- Communiqué de presse : ADEME, \emph{Le numérique : allié de la transition écologique ?} (06/11/2025)}
+
+ADEME (étude IT4Green, E.~Fangeat)
+& \inst \nl \sci \nl \med
+& Communiqué de presse présenté au Green Tech Forum ; 5 rapports d'ACV, synthèse et rapport à destination des décideurs ; citation d'un coordinateur de l'étude.
+& Décideurs (ministères de l'écologie et du Numérique), journalistes, acteurs de la filière numérique.
+& Cadrage « évaluation objective » par ACV conséquentielle : gains réels mais modestes, fragiles et non généralisables. Mise en avant des effets rebond (pneus : +1\,\% de kilomètres annule le gain), de la dépendance aux métaux et de la nécessité d'une sobriété et d'une approche au cas par cas. L'IA générative est signalée comme non évaluée faute de données. \\
+
+% =====================================================
+\groupe{}{Document 2 -- Article de presse institutionnelle : \emph{Le poids écologique du numérique : comment freiner l'emballement ?}, ADEME Infos (avis de janvier 2025)}
+
+ADEME (R.~Guastavi, M.~Wellhoff)
+& \med \nl \inst
+& Article d'ADEME Infos (média institutionnel) relayant un avis publié en janvier 2025 ; entretiens avec deux responsables de l'agence.
+& Grand public, consommateurs et entreprises ; décideurs publics.
+& Cadrage alarmiste sur la « matérialité du virtuel » : empreinte carbone du numérique en France passée de 17 à 29,5\,MtCO$_2$e en deux ans, risque d'être multipliée par trois d'ici 2050 avec l'IA. Appel à la sobriété, à l'allongement de la durée de vie des appareils et à la priorisation des usages ; dénonce les « fausses bonnes idées ». \\
+
+Agence internationale de l'énergie (AIE)
+& \sci \nl \inst
+& Prévision citée par l'ADEME : hausse de plus de 75\,\% de la consommation électrique des data centers d'ici 2026.
+& Décideurs et États (via l'article, grand public).
+& Mise en avant de la rapidité de la hausse de la demande électrique des data centers, comme enjeu énergétique. \\
+
+Géants du numérique (Microsoft, Google)
+& \eco
+& Engagements climatiques, relance de Three Mile Island, pari sur les petits réacteurs modulaires (traces rapportées par l'ADEME).
+& Investisseurs, régulateurs, grand public.
+& Sécurisation de l'approvisionnement électrique des data centers ; l'ADEME souligne qu'ils peinent à tenir leurs engagements climatiques. \\
+
+\newpage
+% =====================================================
+\groupe{}{Document 3 -- Article scientifique : B.~Callegari, B.~A.~Misganaw et M.~Bagherzadeh, \emph{Paved with good intentions: From digitalization to carbon neutrality}, Journal of Environmental Management (2024)}
+
+Callegari et~al. (Kristiania University College / NEOMA Business School)
+& \sci
+& Article de recherche dans une revue à comité de lecture (Elsevier, accès libre), fondé sur le cadre de Georgescu-Roegen/Daly.
+& Chercheurs en gestion et économie écologique ; décideurs (implications pour les politiques publiques).
+& Cadrage théorique et systémique : la numérisation seule ne mène pas à la neutralité carbone (pas de dématérialisation automatique, effets rebond, gouvernance d'entreprise inchangée). Plaide pour une « double transformation », la sobriété numérique et un débat pluri-acteurs. \\
+
+WEF, Accenture, McKinsey, PwC, EY, Alibaba (D.~Zhang)
+& \eco
+& Rapports sectoriels de cabinets de conseil et du WEF (jusqu'à $-20$\,\% d'émissions d'ici 2050) ; tribune sponsorisée dans la \emph{Harvard Business Review} (citations rapportées par les auteurs).
+& Dirigeants d'entreprises, décideurs, investisseurs.
+& Cadrage optimiste : le numérique comme levier majeur de décarbonation et d'accélération de l'action climatique. \\
+
+% =====================================================
+\groupe{https://www.technologyreview.com/2025/04/10/1114912/why-the-climate-promises-of-ai-sound-a-lot-like-carbon-offsets/amp/}{Document 4 -- Article de presse : J.~Temple, \emph{Why the climate promises of AI sound a lot like carbon offsets}, MIT Technology Review (10/04/2025)}
+
+James Temple (MIT Technology Review)
+& \med
+& Article de presse spécialisée.
+& Grand public informé, lecteurs du secteur technologique.
+& Compare les promesses climatiques de l'IA à des crédits carbone : bénéfices futurs incertains qui servent à justifier aujourd'hui des data centers alimentés par des fossiles, sans mécanisme de responsabilité. \\
+
+Sam Altman (OpenAI)
+& \med \nl \eco
+& Déclarations publiques rapportées par Temple (« triomphes stupéfiants », climat compris).
+& Grand public, investisseurs, décideurs.
+& Cadrage de promesse : l'IA réglera le climat grâce à une intelligence et une énergie abondantes. \\
+
+AIE
+& \sci \nl \inst
+& Scénario de réduction de 1,4\,Gt d'émissions en 2035 cité par Temple.
+& Décideurs, experts de l'énergie.
+& Présenté comme un scénario et non une prédiction : l'impact pourrait être marginal sans conditions favorables. \\
+
+Développeurs de data centers, industrie gazière, entreprises technologiques
+& \eco
+& Pratiques (gaz, charbon reconverti, fermes solaires, nucléaire, géothermie) rapportées par Temple.
+& Marchés, électriciens, régulateurs.
+& Cadrage opérationnel : comment alimenter les data centers (énergie fossile ou bas carbone) ; la pratique des uns contredit le discours de transition. \\
+
+\newpage
+% =====================================================
+\groupe{}{Document 5 -- Article scientifique : C.~Freitag, M.~Berners-Lee, K.~Widdicks, B.~Knowles, G.~S.~Blair et A.~Friday, \emph{The real climate and transformative impact of ICT: A critique of estimates, trends, and regulations}, Patterns (10/09/2021)}
+
+Freitag et~al. (Lancaster University / Small World Consulting)
+& \sci \nl \inst
+& Article de synthèse dans une revue à comité de lecture (accès libre), avec annexe méthodologique et données déposées ; recommandations de politique publique.
+& Chercheurs, décideurs (Commission européenne, régulateurs), industrie du numérique.
+& Cadrage par l'estimation et la méthode : empreinte sous-estimée (erreur de troncature), effets rebond, limites de l'efficacité et des renouvelables. Plaide pour une régulation sectorielle contraignante en l'absence de contrainte carbone globale. \\
+
+Malmodin et Lundén (Ericsson / Talia)
+& \sci \nl \eco
+& Articles publiés (\emph{Sustainability} 2018), présentation techUK (2020), billet de blog d'Ericsson relayant leurs travaux.
+& Communauté scientifique, opérateurs et industrie des télécoms, décideurs.
+& Cadrage rassurant : émissions des TIC stabilisées, réduction de moitié possible d'ici 2030 grâce aux renouvelables. Données confidentielles et conflit d'intérêts potentiel relevés par Freitag et~al. \\
+
+Belkhir et Elmeligi ; Andrae et Edler (Huawei)
+& \sci
+& Articles scientifiques (\emph{J.\ Clean.\ Prod.}, \emph{Challenges}) ; échanges avec les auteurs de la revue.
+& Communauté scientifique, décideurs.
+& Cadrage de la croissance : hausse continue des émissions liée au trafic de données et au nombre d'appareils, fin de la loi de Moore. \\
+
+Masanet et al.
+& \sci
+& Article dans \emph{Science} (2020).
+& Communauté scientifique, décideurs de l'énergie.
+& Cadrage mesuré : efficacité réelle mais limitée, d'où un besoin d'action politique avant de dépasser un doublement de la demande. \\
+
+GeSI (\emph{SMARTer 2030})
+& \eco
+& Rapport sponsorisé par des entreprises des TIC.
+& Gouvernements et entreprises (invités à investir davantage dans les TIC).
+& Cadrage d'« habilitation » : les TIC évitent plus d'émissions qu'elles n'en causent. Critiqué pour son manque de transparence et la sous-estimation des effets rebond. \\
+
+Commission européenne (Pacte vert)
+& \inst
+& Communications et documents officiels (Pacte vert, plan d'action pour l'économie circulaire), financements de l'IA, de l'IoT et de la blockchain.
+& États membres, industrie, citoyens européens.
+& Cadrage de compétitivité et d'habilitation : le numérique comme pilier de la neutralité climatique, avec data centers neutres d'ici 2030, mais sans incitations ni sanctions. \\
+
+Grandes entreprises des TIC (Microsoft, Amazon, BT, Sky, Apple)
+& \eco
+& Annonces d'engagements (neutralité carbone, net zéro, « carbone négatif »), billets de blog, rapports annuels.
+& Investisseurs, clients, grand public, régulateurs.
+& Cadrage volontariste d'auto-régulation par des engagements de neutralité, dont l'ambition et la couverture de la chaîne d'approvisionnement sont critiquées. \\
+
+Union internationale des télécommunications (avec GSMA, GeSI, SBTi)
+& \inst \nl \eco
+& Norme volontaire publiée en février 2020 (communiqué et recommandation L.1450).
+& Opérateurs et industriels du numérique, décideurs.
+& Cadrage normatif : trajectoire de $-45$\,\% d'ici 2030 et net zéro en 2050, jugée utile comme modèle mais insuffisante sans mécanismes de conformité. \\
+
+\newpage
+% =====================================================
+\groupe{https://www.tf1info.fr/environnement-ecologie/environnement-le-ticket-de-caisse-dematerialise-une-mesure-pas-si-ecolo-2257218.html}{Document 6 -- Article de presse : TF1 Info, \emph{Environnement : le ticket de caisse dématérialisé, une mesure pas si écolo} (TF1 Info)}
+
+TF1 Info (rédaction)
+& \med
+& Article en ligne sur tf1info.fr (rubrique Environnement-Écologie) confrontant les déclarations politiques aux analyses d'experts.
+& Grand public (citoyens et consommateurs).
+& Met en avant l'incertitude scientifique sur le bilan écologique du ticket dématérialisé et rappelle que l'absence de ticket par défaut est la règle principale. \\
+
+Alain Houpert et Alexis Corbière (parlementaires)
+& Institutionnelle (et médiatique par relais)
+& Interpellation du gouvernement dans l'hémicycle (Assemblée nationale) et prises de position publiques relayées par la presse.
+& Décideurs publics (gouvernement), parlementaires et citoyens.
+& Présentent le ticket dématérialisé comme une fausse bonne idée écologique en s'appuyant sur le surcoût carbone estimé (+2~g de $\text{CO}_2$). \\
+
+Frédéric Bordage / Collectif Green IT
+& Scientifique (et médiatique via interview)
+& Travaux d'expertise interne sur les impacts du numérique et entretien accordé à TF1 Info.
+& Experts, décideurs publics et grand public.
+& Déconstruit l'usage sans recul d'une étude interne obsolète et insiste sur les angles morts matériels (écrans en caisse, consommation d'eau et métaux). \\
+
+GreenTicket (start-up)
+& Économique (et médiatique)
+& Chiffres et calculs communiqués publiquement sur l'empreinte du ticket de caisse papier (arbres abattus et litres d'eau).
+& Acteurs économiques (commerçants), décideurs et grand public.
+& Met en avant l'ampleur des ressources naturelles consommées par la production de 30 milliards de tickets papier chaque année. \\
+
+Gouvernement français
+& Institutionnelle
+& Réglementation entrant en vigueur le 1\textsuperscript{er} août 2023 (fin de l'impression automatique) et position officielle citée dans l'article.
+& Consommateurs, commerçants et professionnels du numérique.
+& Présente la mesure comme un levier de réduction des déchets fondé sur le choix du consommateur, tout en appelant à l'écoconception et à la sensibilisation numérique. \\
+
+\end{longtable}
+
+\end{document}

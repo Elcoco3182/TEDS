@@ -12,6 +12,7 @@
 \usepackage{booktabs}
 \usepackage{tikz}
 \usepackage{hyperref}
+ \usepackage{amsmath}
 
 % ---------- Couleurs ----------
 \definecolor{bleu}{HTML}{009EE0}
@@ -44,15 +45,18 @@
 \newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
 
 % Ligne de titre de groupe (un groupe = un document)
-\newcommand{\groupe}[1]{%
+% Ligne de titre de groupe (un groupe = un document), titre cliquable
+\newcommand{\groupe}[2]{%
   \rowcolor{bleufonce}
-  \multicolumn{6}{@{}l@{}}{\color{white}\bfseries\ \,#1} \\
+  \multicolumn{6}{@{}l@{}}{\href{#1}{\textcolor{white}{\bfseries\ \,#2}}} \\
 }
 
 \begin{document}
 
 {\color{bleufonce}\LARGE\bfseries TD2 - Tableau d'analyse des acteurs}\par\vspace{2pt}
-{\color{bleu}\large Groupe 10 -- Ferracuti Filippo - Cuenca Corentin - Daviaud Yohan - Leclere Adam - Vayva Nathan}\par\vspace{8pt}
+{\color{bleu}\large Groupe 10 -- Ferracuti Filippo - Cuenca Corentin - Daviaud Yohan - Leclere Adam - Vayva Nathan}\par \vspace{2pt}
+{\color{bleu}\large 18/11/2026}
+\vspace{8pt}
 
 \textbf{Controverse :} le numérique (et l'IA) est-il un allié de la transition écologique, ou son empreinte et ses effets rebond en annulent-ils les bénéfices ?
 
@@ -93,7 +97,8 @@
 % =====================================================
 % DOCUMENT 1 -- Article scientifique
 % =====================================================
-\groupe{Document 1 -- Article scientifique : Callegari, Misganaw \& Bagherzadeh (2024), \emph{Paved with good intentions}, Journal of Environmental Management}
+\groupe{}{Document 1 -- Communiqué de presse : ADEME, 
+\emph{Le numérique : allié de la transition écologique ?} (06/11/2025)}
 
 Callegari, Misganaw \& Bagherzadeh (NEOMA, Kristiania)
 & Scientifique & \inter
@@ -134,7 +139,7 @@ Acteurs de la blockchain et grandes marques (Nike, Adidas)
 % =====================================================
 % DOCUMENT 2 -- Communiqué ADEME
 % =====================================================
-\groupe{Document 2 -- Communiqué de presse de l'ADEME : \emph{Le numérique : allié de la transition écologique ?} (étude IT4Green, 06/11/2025)}
+\groupe{}{Document 2 -- Article de presse institutionnelle : \emph{Le poids écologique du numérique : comment freiner l'emballement ?}, ADEME Infos (avis de janvier 2025)}
 
 ADEME (étude IT4Green)
 & Scientifique & \inter
@@ -155,7 +160,7 @@ Ministères de l'Écologie et du Numérique
 % =====================================================
 % DOCUMENT 3 -- ADEME Infos
 % =====================================================
-\groupe{Document 3 -- Article ADEME Infos : \emph{Le poids écologique du numérique : comment freiner l'emballement ?} (avis de janvier 2025)}
+\groupe{}{Document 3 -- Article scientifique : B.~Callegari, B.~A.~Misganaw et M.~Bagherzadeh, \emph{Paved with good intentions: From digitalization to carbon neutrality}, Journal of Environmental Management (2024)}
 
 ADEME (R.~Guastavi, M.~Wellhoff) -- constat
 & Scientifique & \opp
@@ -186,7 +191,9 @@ Microsoft et Google
 % =====================================================
 % DOCUMENT 4 -- MIT Technology Review
 % =====================================================
-\groupe{Document 4 -- Article de presse : J.~Temple, \emph{Why the climate promises of AI sound a lot like carbon offsets}, MIT Technology Review (10/04/2025)}
+
+\groupe{https://www.technologyreview.com/2025/04/10/1114912/why-the-climate-promises-of-ai-sound-a-lot-like-carbon-offsets/amp/}{Document 4 -- Article de presse : J.~Temple, \emph{Why the climate promises of AI sound a lot like carbon offsets}, MIT Technology Review (10/04/2025)}
+
 
 James Temple (MIT Technology Review)
 & Médiatique & \inter
@@ -212,6 +219,88 @@ Entreprises technologiques et électriciens engagés
 & Économique & \fav
 & Financent des fermes solaires, aident à relancer des centrales nucléaires (Three Mile Island) ou signent des contrats géothermiques pour alimenter leurs data centers en énergie bas carbone.
 & Environnemental \nl Économique & \axio \\
+
+\newpage
+% =====================================================
+% DOCUMENT 5
+% =====================================================
+
+\groupe{}{Document 5 -- Article scientifique : C.~Freitag, M.~Berners-Lee, K.~Widdicks, B.~Knowles, G.~S.~Blair et A.~Friday, \emph{The real climate and transformative impact of ICT: A critique of estimates, trends, and regulations}, Patterns (10/09/2021)}
+
+Freitag et~al. (Lancaster University / Small World Consulting)
+& Scientifique & \inter
+& Estiment que les TIC représentent 1,8\,\%--2,8\,\% des émissions mondiales de GES (2,1\,\%--3,9\,\% après correction de l'erreur de troncature). Sans contrainte carbone globale, l'efficacité énergétique, les renouvelables et l'« habilitation » ne suffiront pas : des effets rebond sont probables et une régulation sectorielle contraignante est nécessaire.
+& Environnemental \nl Scientifique & \epi \\
+
+Malmodin et Lundén (Ericsson / Talia)
+& Scientifique & \fav
+& Estiment que les émissions des TIC se sont stabilisées (1,9\,\% du total en 2020) et pourraient être divisées par deux d'ici 2030 grâce aux renouvelables ; les auteurs relèvent toutefois des données confidentielles et un risque de conflit d'intérêts, car les deux travaillent pour des opérateurs de réseaux.
+& Environnemental \nl Scientifique & \epi \\
+
+Belkhir et Elmeligi ; Andrae et Edler (Huawei)
+& Scientifique & \opp
+& Projettent une hausse continue des émissions des TIC, portée par le trafic de données et le nombre d'appareils, car les gains d'efficacité s'essoufflent (fin de la loi de Moore). Leurs données sont toutefois plus anciennes (2008--2012) que celles de Malmodin.
+& Environnemental \nl Scientifique & \epi \\
+
+Masanet et al. (\emph{Science})
+& Scientifique & \inter
+& La consommation des data centers n'a que peu augmenté (194 à 205\,TWh entre 2010 et 2020) malgré une hausse de 550\,\% des calculs, mais l'efficacité ne compensera qu'un doublement de la demande ; au-delà, la consommation croîtra vite sans action politique.
+& Scientifique \nl Environnemental & \epi \\
+
+GeSI (\emph{SMARTer 2030}, rapport sponsorisé par des entreprises des TIC)
+& Économique & \fav
+& Affirme que les TIC pourraient éviter 12,08\,Gt\,CO$_2$e en 2030 dans les autres secteurs, soit bien plus que leurs propres émissions, et seraient donc « carbone négatives ». Les auteurs critiquent le manque de transparence, la minimisation des effets rebond et le conflit d'intérêts.
+& Environnemental \nl Économique & \epi \\
+
+Commission européenne (Pacte vert)
+& Politique & \fav
+& Fait des TIC (IA, IoT, blockchain) un pilier de la neutralité climatique et vise des data centers neutres en carbone d'ici 2030, mais sans mécanisme d'incitation ou de sanction, ni estimation des réductions attendues. Cette stratégie concilie compétitivité économique et climat, au risque de stimuler la consommation.d
+& Politique \nl Économique \nl Environnemental & \axio \\
+
+Grandes entreprises des TIC (Microsoft, Amazon, BT, Sky, Apple)
+& Économique & \inter
+& Annoncent des engagements de neutralité carbone, de net zéro, voire de « carbone négatif » (Microsoft seule), mais ils sont inégalement ambitieux, reposent parfois sur des compensations peu additionnelles et ne couvrent pas toujours les émissions de la chaîne d'approvisionnement.
+& Environnemental \nl Économique & \axio \\
+
+Union internationale des télécommunications (UIT, avec GSMA, GeSI et SBTi)
+& Institutionnel & \inter
+& Propose depuis 2020 une norme volontaire visant $-45$\,\% d'émissions d'ici 2030 et le net zéro en 2050 pour le secteur. Les auteurs la jugent utile comme modèle, mais insuffisante sans mécanismes de conformité obligatoires.
+& Environnemental \nl Politique & \axio \\
+
+
+\groupe{https://www.tf1info.fr/environnement-ecologie/environnement-le-ticket-de-caisse-dematerialise-une-mesure-pas-si-ecolo-2257218.html}{Document 6 -- Article de presse : TF1 Info, \emph{Environnement : le ticket de caisse dématérialisé, une mesure pas si écolo} (TF1 Info)}
+
+TF1 Info (rédaction)
+& Médiatique & \opp
+& La dématérialisation du ticket de caisse n'est pas automatiquement plus écologique que le papier et son impact réel reste inconnu faute d'études globales et actualisées.
+& Environnemental & \epi \\
+
+Alain Houpert (sénateur LR)
+& Politique & \opp
+& Le ticket dématérialisé a un bilan carbone « désastreux » (+2~g de $\text{CO}_2$ par rapport au papier) et constitue une mesure idéologique contre-productive sur le plan environnemental.
+& Environnemental & \epi \\
+
+Alexis Corbière (député LFI)
+& Politique & \opp
+& Le stockage dans les centres de données et la transmission énergétique d'un ticket dématérialisé rejettent 2~g de $\text{CO}_2$ de plus qu'un ticket imprimé.
+& Environnemental & \epi \\
+
+Frédéric Bordage / Collectif Green IT
+& Scientifique & \inter
+& Les chiffres de 2~g de $\text{CO}_2$ sont issus d'une étude interne dépassée et l'impact réel est inconnu faute d'intégrer les nouveaux écrans ; la meilleure pratique reste l'absence totale de ticket (papier ou numérique).
+& Environnemental & \epi \\
+
+GreenTicket (start-up)
+& Économique & \fav
+& L'émission annuelle de 30 milliards de tickets papier équivaut à 250 millions d'arbres abattus et 950 millions de litres d'eau consommés, ce qui justifie de réduire le papier.
+& Environnemental & \epi \\
+
+Gouvernement français
+& Politique & \inter
+& La fin de l'impression automatique évite le gaspillage tout en laissant le choix au consommateur, mais il faut veiller à éviter un transfert d'impact du papier vers le numérique et encourager l'écoconception.
+& Environnemental & Axiologique \\
+
+
 
 \end{longtable}
 
